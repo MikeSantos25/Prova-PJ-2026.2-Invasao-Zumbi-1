@@ -1,7 +1,9 @@
 <img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/5ce8191a-1977-455b-9746-627aac10bfc1" />
 
 PROVA PRÁTICA DE PROGRAMAÇÃO DE JOGOS (2026.2)
+
 Título do Jogo: INVASÃO ZUMBI — Chapada Diamantina
+
 Aluna: Maria Clara Santos Ping de Carvalho
 
 LINKS DE ENTREGA
