@@ -3,7 +3,7 @@ Título do Jogo: INVASÃO ZUMBI — Chapada Diamantina
 Aluna: Maria Clara Santos Ping de Carvalho
 
 LINKS DE ENTREGA
-- Unity Play: https://play.unity.com/pt/games/b77e4fd4-175e-416a-b6f9-e74c4c350685/prova-invasao-zumbi-chapada
+- Unity Play: https://play.unity.com/en/games/b77e4fd4-175e-416a-b6f9-e74c4c350685/prova-invasao-zumbi-chapada
 - YouTube (Gameplay): https://youtu.be/ysxPX47S9W4
 
 COMO FUNCIONA O JOGO
