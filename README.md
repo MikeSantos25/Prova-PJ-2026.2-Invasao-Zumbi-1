@@ -4,7 +4,7 @@ Aluna: Maria Clara Santos Ping de Carvalho
 
 LINKS DE ENTREGA
 - Unity Play: https://play.unity.com/en/games/b77e4fd4-175e-416a-b6f9-e74c4c350685/prova-invasao-zumbi-chapada
-- YouTube (Gameplay): https://youtu.be/ysxPX47S9W4
+- YouTube (Gameplay): https://youtu.be/GB_lX6Vtml8
 
 COMO FUNCIONA O JOGO
 - Objetivo: atravessar a área rural, eliminar toda a horda final perto do helicóptero e embarcar nele.
