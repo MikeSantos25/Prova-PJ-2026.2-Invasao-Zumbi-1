@@ -20,7 +20,6 @@ COMO FUNCIONA O JOGO
   - Fim de jogo: R para reiniciar direto ou Enter para voltar ao menu.
 - Vitória e derrota: derrota quando a vida chega a 0; vitória ao eliminar toda a horda final e entrar no helicóptero.
 ORGANIZAÇÃO DOS CÓDIGOS (Codigos/)
-ORGANIZAÇÃO DOS CÓDIGOS (Codigos/)
 - Jogador: MovimentoJogador.cs, TiroJogador.cs, VidaJogador.cs
 - Inimigos: Zumbi.cs
 - Itens: Bala.cs, ItemColetavel.cs, Helicoptero.cs
