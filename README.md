@@ -14,29 +14,10 @@ Menu inicial1 / 2 (ou A / D, ou setas) escolhem o personagem · Enter começa
 Derrota quando a vida chega a zero
 Vitória quando entrar no helicóptero após derrotar toda a horda final.
 Personagens: Capitão Silva e Capitã Silva (muda apenas o visual; vida, velocidade e arma são iguais).
-Organização dos códigos (Codigos/)Todo o funcionamento do jogo está dividido em pastas simples dentro de Codigos/:Codigos/
-├── Jogador/
-│   ├── MovimentoJogador.cs     <- movimento nas 4 direções e bloqueio nas bordas
-│   ├── TiroJogador.cs          <- disparo, mira e controle de munição
-│   └── VidaJogador.cs          <- vida, dano recebido e cura
-├── Inimigos/
-│   └── Zumbi.cs                <- perseguição, ataque, vida e morte dos zumbis
-├── Itens/
-│   ├── Bala.cs                 <- movimento e impacto do tiro
-│   ├── ItemColetavel.cs        <- caixas de munição e kits médicos
-│   └── Helicoptero.cs          <- libera a fuga após derrotar a horda
-├── Jogo/
-│   ├── GerenciadorDoJogo.cs    <- estados (Menu, Jogando, Fim), pontos, vitória e derrota
-│   └── TelhadoTransparente.cs  <- deixa o telhado transparente quando o jogador entra numa casa
-├── Interface/
-│   └── TelasDoJogo.cs          <- menu inicial, barra de vida/munição (HUD) e tela final
-└── Ferramentas/
-    ├── AnimacaoSprites.cs      <- troca os quadros de animação conforme a direção
-    ├── ConjuntoDeAnimacoes.cs  <- guarda as 4 animações (parado, andando, atacando, morrendo)
-    ├── CameraSegue.cs          <- faz a câmera acompanhar o jogador
-    ├── Entrada.cs              <- lê teclado e mouse em um único lugar
-    ├── CriadorDeSprites.cs     <- desenha por código a bala, a caixa de munição e o kit médico
-    └── Sons.cs                 <- gera e toca os efeitos sonoros do jogo
+Organização dos códigos (Codigos/)
+Todo o funcionamento do jogo está dividido em pastas simples dentro de Codigos
+<img width="1679" height="643" alt="image" src="https://github.com/user-attachments/assets/da0eabe7-8a69-4fe0-b6c1-8f612906a945" />
+
 3.Como cada parte foi feita:
 Mapa e colisãoO cenário usa Tilemap em camadas (chão, sombras, árvores/paredes e telhados).
 Árvores, paredes, cercas e carros bloqueiam a passagem; mato e flores deixam o jogador passar.
@@ -57,5 +38,6 @@ Pontuação, interface e som
 Pontuação (GerenciadorDoJogo.cs): ganha pontos ao eliminar zumbis (10, 20 ou 50), coletar itens (+5), vencer a partida (+500) e manter vida restante (+5 por ponto de vida).
 Telas (TelasDoJogo.cs): exibe o menu inicial (seleção de personagem, comandos e regras), o HUD durante a partida (vida, munição, pontos e distância até o helicóptero) e a tela final com o resumo da partida.
 Gráficos e áudio (AnimacaoSprites.cs, CriadorDeSprites.cs, Sons.cs): as animações funcionam em 8 direções; os ícones de bala, munição e kit médico são desenhados por código, assim como os efeitos sonoros de tiro, coleta e passos.
+
 
 Aluna: Maria Clara Santos Ping De Carvalho
