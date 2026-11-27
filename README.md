@@ -1,43 +1,38 @@
-Prova Prática de Programação de Jogos
-(2026.2)
+PROVA PRÁTICA DE PROGRAMAÇÃO DE JOGOS (2026.2)
+Título do Jogo: INVASÃO ZUMBI — Chapada Diamantina
+Aluna: Maria Clara Santos Ping de Carvalho
 
-INVASÃO ZUMBI — Chapada DiamantinaJogo 2D visto de cima (estilo isométrico) feito na Unity 6.
+LINKS DE ENTREGA
+- Unity Play: https://play.unity.com/pt/games/b77e4fd4-175e-416a-b6f9-e74c4c350685/prova-invasao-zumbi-chapada
+- YouTube (Gameplay): https://youtu.be/ysxPX47S9W4
 
-Link do Jogo no Play Unity: https://play.unity.com/pt/games/b77e4fd4-175e-416a-b6f9-e74c4c350685/prova-invasao-zumbi-chapada
-
-Você controla um sobrevivente que precisa atravessar uma área rural, eliminar a horda de zumbis perto do helicóptero e fugir nele.
-Como funciona o jogo 
-O objetivo é eliminar toda a horda final e embarcar no helicóptero.
-Andar W A S D ou setas
-AtirarBotão esquerdo do mouse (mira no cursor) ou ESPAÇO (atira para onde olha)
-Menu inicial1 / 2 (ou A / D, ou setas) escolhem o personagem · Enter começa
-Derrota quando a vida chega a zero
-Vitória quando entrar no helicóptero após derrotar toda a horda final.
-Personagens: Capitão Silva e Capitã Silva (muda apenas o visual; vida, velocidade e arma são iguais).
-Organização dos códigos (Codigos/)
-Todo o funcionamento do jogo está dividido em pastas simples dentro de Codigos
+COMO FUNCIONA O JOGO
+- Objetivo: atravessar a área rural, eliminar toda a horda final perto do helicóptero e embarcar nele.
+- Personagens: Capitão Silva e Capitã Silva (mesmos atributos de vida, velocidade e arma).
+- Controles:
+  - Movimentação: W, A, S, D ou setas.
+  - Ataque: botão esquerdo do mouse (mira no cursor) ou ESPAÇO (atira na direção em que o personagem olha).
+  - Menu inicial: 1 / 2 (ou A / D / setas) para escolher o personagem e Enter para iniciar.
+  - Fim de jogo: R para reiniciar direto ou Enter para voltar ao menu.
+- Vitória e derrota: derrota quando a vida chega a 0; vitória ao eliminar toda a horda final e entrar no helicóptero.
+ORGANIZAÇÃO DOS CÓDIGOS (Codigos/)
+ORGANIZAÇÃO DOS CÓDIGOS (Codigos/)
+- Jogador: MovimentoJogador.cs, TiroJogador.cs, VidaJogador.cs
+- Inimigos: Zumbi.cs
+- Itens: Bala.cs, ItemColetavel.cs, Helicoptero.cs
+- Jogo: GerenciadorDoJogo.cs, TelhadoTransparente.cs
+- Interface: TelasDoJogo.cs
+- Ferramentas: AnimacaoSprites.cs, ConjuntoDeAnimacoes.cs, CameraSegue.cs, Entrada.cs, CriadorDeSprites.cs, Sons.cs
 <img width="1679" height="643" alt="image" src="https://github.com/user-attachments/assets/da0eabe7-8a69-4fe0-b6c1-8f612906a945" />
 
-3.Como cada parte foi feita:
-Mapa e colisãoO cenário usa Tilemap em camadas (chão, sombras, árvores/paredes e telhados).
-Árvores, paredes, cercas e carros bloqueiam a passagem; mato e flores deixam o jogador passar.
-Ao entrar embaixo de um telhado, o script TelhadoTransparente.cs reduz a opacidade dele para você enxergar o personagem dentro da casa.
-Os limites do mapa são protegidos para que nem o jogador nem os zumbis saiam da área jogável.
-JogadorMovimento (MovimentoJogador.cs): anda nas quatro direções com velocidade constante e desliza nas paredes em vez de travar nas quinas.
-Tiro (TiroJogador.cs e Bala.cs): começa com 80 balas (máximo 150). Cada disparo gasta 1 bala, mostra um clarão na arma, toca o som de tiro e cria um projétil que causa 1 de dano ao atingir um zumbi.
-Vida (VidaJogador.cs): começa com 100 de vida. Ao levar dano, a tela pisca em vermelho; se chegar a zero, ocorre derrota.Inimigos.
-(Zumbi.cs)Existem 3 tipos de zumbis, usando o mesmo script com atributos diferentes:
-<img width="1677" height="262" alt="image" src="https://github.com/user-attachments/assets/636f7062-0965-4746-a20c-b4152229ac6b" />
-Ficam parados até o jogador se aproximar ou acertar um tiro, depois perseguem o jogador e causam dano ao encostar.
-Ao morrer, soltam efeito de sangue, somam pontos e desaparecem após alguns segundos.
-Itens e objetivo final
-Caixa de munição (ItemColetavel.cs): recupera +20 balas e dá +5 pontos (não é coletada se a munição já estiver cheia).
-Kit médico (ItemColetavel.cs): recupera +30 de vida e dá +5 pontos (não é coletado se a vida já estiver cheia).
-Helicóptero (Helicoptero.cs): fica bloqueado enquanto houver zumbis da horda final vivos. Assim que todos são eliminados, o acesso é liberado e encostar nele encerra o jogo com vitória.
-Pontuação, interface e som
-Pontuação (GerenciadorDoJogo.cs): ganha pontos ao eliminar zumbis (10, 20 ou 50), coletar itens (+5), vencer a partida (+500) e manter vida restante (+5 por ponto de vida).
-Telas (TelasDoJogo.cs): exibe o menu inicial (seleção de personagem, comandos e regras), o HUD durante a partida (vida, munição, pontos e distância até o helicóptero) e a tela final com o resumo da partida.
-Gráficos e áudio (AnimacaoSprites.cs, CriadorDeSprites.cs, Sons.cs): as animações funcionam em 8 direções; os ícones de bala, munição e kit médico são desenhados por código, assim como os efeitos sonoros de tiro, coleta e passos.
-
-
-Aluna: Maria Clara Santos Ping De Carvalho
+RESUMO DA IMPLEMENTAÇÃO
+- Mapa e colisão: Tilemap em camadas (chão, sombras, árvores/paredes e telhados), com colisão para obstáculos sólidos, passagem livre em mato/flores, proteção das bordas e transparência gradual de telhados ao entrar (TelhadoTransparente.cs).
+- Jogador: movimentação em 4 direções com deslize em paredes (MovimentoJogador.cs), disparo com munição limitada e projéteis com 1 de dano (TiroJogador.cs, Bala.cs) e vida com feedback visual de dano (VidaJogador.cs). 
+- Inimigos: 3 tipos de zumbis com diferentes velocidades, resistências e pontuações, perseguição ao detectar o jogador ou levar tiro, dano por contato e efeito ao morrer (Zumbi.cs).
+- <img width="1677" height="262" alt="image" src="https://github.com/user-attachments/assets/636f7062-0965-4746-a20c-b4152229ac6b" />
+- Itens e objetivo final: caixas de munição (+20 balas, +5 pontos) e kits médicos (+30 de vida, +5 pontos) respeitando limites máximos (ItemColetavel.cs);
+- helicóptero liberado após eliminar toda a horda final (Helicoptero.cs).
+- Pontuação, interface e som: contagem de pontos por inimigos, itens, vitória e vida restante
+- (GerenciadorDoJogo.cs); menu inicial, HUD e tela final
+-  (TelasDoJogo.cs); animações em 8 direções, sprites gerados por código e efeitos sonoros
+-  (AnimacaoSprites.cs, CriadorDeSprites.cs, Sons.cs).
